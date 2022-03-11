@@ -20,7 +20,7 @@ public class Home extends FrameworkBase {
         webDriver().findElement(By.xpath("//input[@id='loginPassword']")).sendKeys ("199011");
         Thread.sleep(1000);
         webDriver().findElement(By.xpath("//*[@id='loginSubmit']//parent::flui-button")).click();
-        Thread.sleep(30000);
+        waitPageLoad();
         a11y.checkAccessibilityViolations();
     }
 }
